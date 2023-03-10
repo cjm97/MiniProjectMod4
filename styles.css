@@ -1,0 +1,97 @@
+/* general */
+
+.btn {
+}
+/* navbar */
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.disabled:hover {
+  cursor: not-allowed;
+}
+
+/* hero-section */
+#hero {
+  max-width: 1200px;
+  margin: 0 auto 32px auto;
+  height: 30vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.hero__image--container {
+  margin: 32px;
+}
+
+.hero__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+/* starters */
+#kanto__starters {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* footer */
+footer {
+    margin-top: 32px;
+}
+.footer__statement {
+    text-align: center;
+    font-size: 12px;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 16px;
+}
+/* images */
+.pokemon__logo {
+  margin-top: 3px;
+}
+
+.hero__image {
+  height: 75px;
+  width: 75px;
+}
+
+.pokemon__starter {
+  height: 100px;
+  width: 100px;
+  align-self: center;
+  margin: 16px;
+}
+
+.bulbapedia__logo {
+  height: 24px;
+  width: 24px;
+  filter: sepia(100%) hue-rotate(190deg) saturate(900%);
+}
+
+/* pokemon list */
+
+#pokemon-list {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.list__title {
+    text-align: center;
+    text-decoration: underline;
+}
