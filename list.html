@@ -10,7 +10,7 @@
         <p class="pokemon-description">
           This is some information about the pokemon!
         </p>
-        <a href="#" target="_blank" class="btn btn-primary card-link"
+        <a class="btn btn-primary card-link"
           >Listen to my cry!</a
         >
       </div>
@@ -31,30 +31,27 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <nav class="navbar bg-body-tertiary navbar-expand">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/pokelogo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top pokemon__logo">
+          PokéList
+        </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+            <a class="nav-link" href="list.html">List</a>
+            <a class="nav-link" href="#">About</a>
+            <a class="nav-link disabled">Updates</a>
+          </div>
+        </div>    
+    </nav>
     <h1 class="list__title">Pokemon List</h1>
     <div id="pokemon-list" class="row"></div>
 
-    <script>
-      function addCards(pokemon) {
-    const template = document
-      .getElementById("pokemon-card-template")
-      .content.cloneNode(true);
-    template.querySelector(".pokemon-name").innerText = pokemon.species.name.toUpperCase();
-    template.querySelector(".pokemon-sprite").src = pokemon.sprites.front_default;
-    // template.querySelector(".pokemon-sprite").src = pokemon.official-artwork.front_default;
-    document.querySelector("#pokemon-list").appendChild(template);
-}
-
-//https://pokeapi.co/api/v2/pokemon/1/
-
-for (let i=1; i<152; i++){
-    fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-      .then((response) => response.json())
-      .then((json) => addCards(json));
-}
-
-// addCards(json, ${i}) i can be associated with the pokemon number in case i use another API to fetch more data, can use that to insert text to respective pokemon card.
-    </script>
+    
+    <script src="main.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
