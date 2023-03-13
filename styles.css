@@ -154,13 +154,15 @@ img:hover {
 }
 
 .pokemon-name {
-  font-size: 24px;
+  font-size: 18px;
+  align-self: center;
 }
 
 .pokemon-type {
-  font-size: 16px;
+  font-size: 12px;
   display: flex;
   color: white;
+  align-self: center;
 }
 
 .pokemon-type-item {
@@ -172,6 +174,40 @@ img:hover {
 .pokemon-description {
   text-align: left;
   padding-top: 8px;
+  font-size: 14px;
+  align-self: center;
+}
+
+.pokemon-sprite {
+  align-self: center;
+  width: 200px;
+}
+
+.pokemon-body {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+.pokemon-stat {
+  width:40%;
+}
+.card-link {
+  font-size: 14px;
+}
+
+.button__container {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  gap: 16px;
+}
+
+.modal-button {
+  margin-left: 20px;
+}
+
+.modal-body {
+  align-self: center;
 }
 
 /* about */
@@ -256,4 +292,17 @@ img:hover {
 }
 .fairy {
   background-color: #d685ad;
+}
+
+
+/* chart */
+
+#chart-container {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.modal {
 }
