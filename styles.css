@@ -2,13 +2,15 @@
 body {
   background: #fff url(images/container_bg.png)
 }
-.btn:hover,
-.btn:active {
-}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* navbar */
@@ -210,6 +212,13 @@ img:hover {
   align-self: center;
 }
 
+.pokemon__list--numbers{
+  margin: 8px;
+}
+.pokemon__list--item a {
+  text-decoration: none;
+  color: white;
+}
 /* about */
 
 #about {
@@ -235,6 +244,20 @@ img:hover {
   width: 500px;
   display: block;
   margin: 50px auto;
+  animation-duration: 5s;
+  animation-name: spin;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0%;
+  }
+ 
+  100%{
+transform: rotate(360deg);
+opacity: 100%;
+  }
 }
 
 /* TYPE COLOURS */

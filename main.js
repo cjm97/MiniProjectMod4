@@ -1,3 +1,4 @@
+//home page cries
 const pokemonCry = (file) => {
   new Audio(file).play();
 };
@@ -139,17 +140,16 @@ const appendDescription = (description) => {
 };
 
 //https://pokeapi.co/api/v2/pokemon/1/ pokemon name/image
-for (let i = 1; i < 152; i++) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-    .then((response) => response.json())
-    .then((json) => addCards(json, `${i}`));
-}
+// for (let i = 1; i < 152; i++) {
+//   fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
+//     .then((response) => response.json())
+//     .then((json) => addCards(json, `${i}`));
+// }
 
-//https://pokeapi.co/api/v2/pokemon-species/1 flavour text
-for (let i = 1; i < 152; i++) {
-  fetch(`https://pokeapi.co/api/v2/pokemon-species/${i}`)
-    .then((response) => response.json())
-    .then((json) => appendDescription(json));
-}
+// //https://pokeapi.co/api/v2/pokemon-species/1 flavour text
+// for (let i = 1; i < 152; i++) {
+//   fetch(`https://pokeapi.co/api/v2/pokemon-species/${i}`)
+//     .then((response) => response.json())
+//     .then((json) => appendDescription(json));
+// }
 
-// CHART
