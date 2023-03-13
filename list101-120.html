@@ -107,16 +107,19 @@
     </footer>
     <script src="main.js"></script>
     <script>
-      for (let i = 101; i < 121; i++) {
-  fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-    .then((response) => response.json())
-    .then((json) => addCards(json, `${i}`));
+       async function loadCards() {
+  for (let i = 101; i < 121; i++) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${i}`);
+    const pokemon = await response.json();
+    addCards(pokemon, `${i}`);
+    
+    const speciesResponse = await fetch(`https://pokeapi.co/api/v2/pokemon-species/${i}`);
+    const species = await speciesResponse.json();
+    appendDescription(species);
+  }
 }
-for (let i = 101; i < 121; i++) {
-  fetch(`https://pokeapi.co/api/v2/pokemon-species/${i}`)
-    .then((response) => response.json())
-    .then((json) => appendDescription(json));
-}
+
+loadCards();
     </script>
     <!--Bootstrap script-->
     <script
