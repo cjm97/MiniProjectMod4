@@ -7,6 +7,7 @@ function addCards(pokemon, number) {
   const template = document
     .getElementById("pokemon-card-template")
     .content.cloneNode(true);
+    //pokemon name
   let pokeName =
     pokemon.species.name.slice(0, 1).toUpperCase() +
     pokemon.species.name.slice(1);
@@ -16,21 +17,25 @@ function addCards(pokemon, number) {
     " " +
     pokemon.species.name.slice(0, 1).toUpperCase() +
     pokemon.species.name.slice(1);
+    //pokemon image
   template.querySelector(".pokemon-sprite").src =
     pokemon["sprites"]["other"]["official-artwork"]["front_default"];
+    //adding class for pokemon description - lets addDescription() function work as intended 
   template
     .querySelector(".pokemon-description")
     .classList.add(pokemon.species.name);
+    //adds class so audio can be linked to right pokemon file
   template
     .querySelector(".btn-primary")
     .classList.add(pokemon.species.name + "-audio");
+    //pokemon first type
   template.querySelector(".pokemon-type-1").innerText =
     pokemon["types"]["0"]["type"]["name"].slice(0, 1).toUpperCase() +
     pokemon["types"]["0"]["type"]["name"].slice(1);
   template
     .querySelector(".pokemon-type-1")
     .classList.add(pokemon["types"]["0"]["type"]["name"]);
-
+//if pokemon has a 2nd type, add it
   if (pokemon.types.length > 1) {
     template.querySelector(".pokemon-type-2").innerText =
       pokemon["types"]["1"]["type"]["name"].slice(0, 1).toUpperCase() +
@@ -38,16 +43,15 @@ function addCards(pokemon, number) {
     template
       .querySelector(".pokemon-type-2")
       .classList.add(pokemon["types"]["1"]["type"]["name"]);
-  } else {
+  } else { //otherwise make it blank so it doesn't throw an error.
     template.querySelector(".pokemon-type-2").innerText = "";
   }
-  
+  //set an id for the hcart to target
   template.querySelector(".pokemon-stat").setAttribute("id", `${pokemon.species.name}-stat`);
   //MODAL
-  // template.querySelector("#exampleModal")['data-bs-target']="#test"
-  // template.querySelector(".modal-button").innerText = `${pokemon.species.name} Stats`
-  template.getElementById('modal__button').setAttribute("data-bs-target", `#${pokemon.species.name}-modal`)
+  // set an id with the "pokemon-modal" naming convention for the modal button to have a target window to toggle.
   template.querySelector(".modal").setAttribute("id", `${pokemon.species.name}-modal`);
+  template.getElementById('modal__button').setAttribute("data-bs-target", `#${pokemon.species.name}-modal`)
   template.querySelector(".modal-body").classList.add(`${pokemon.species.name}-modal-body`)
   template.querySelector(".modal-body").innerText = "Test"
 
@@ -56,7 +60,6 @@ function addCards(pokemon, number) {
     new Audio(`audio/cries/${number}.ogg`).play();
   };
 
-  // template.querySelector(`${pokemon.species.name}-audio`).play
   template
     .querySelector(`.${pokemon.species.name}-audio`)
     .addEventListener("click", playAudio);
@@ -138,18 +141,3 @@ const appendDescription = (description) => {
     "flavor_text_entries"
   ]["2"]["flavor_text"].replace("\u000c", " ");
 };
-
-//https://pokeapi.co/api/v2/pokemon/1/ pokemon name/image
-// for (let i = 1; i < 152; i++) {
-//   fetch(`https://pokeapi.co/api/v2/pokemon/${i}`)
-//     .then((response) => response.json())
-//     .then((json) => addCards(json, `${i}`));
-// }
-
-// //https://pokeapi.co/api/v2/pokemon-species/1 flavour text
-// for (let i = 1; i < 152; i++) {
-//   fetch(`https://pokeapi.co/api/v2/pokemon-species/${i}`)
-//     .then((response) => response.json())
-//     .then((json) => appendDescription(json));
-// }
-

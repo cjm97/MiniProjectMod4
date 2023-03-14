@@ -43,23 +43,6 @@ nav {
   justify-self: center;
 }
 
-.letterE{
-  animation-duration: 2s;
-  animation-name: rotate;
-  animation-iteration-count: infinite;
-}
-
-@keyframes rotate {
-  0%{
-    transform:rotate(0);
-  }
-  50%{
-    transform: rotate(0.25turn);
-  }
-  100%{
-    transform:rotate(0.5turn);
-  }
-}
 /* starters */
 #kanto__starters {
   max-width: 1200px;
