@@ -1,0 +1,41 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Pokemon List",
+    "description": "My User Project Application API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Pokemon",
+      "description": "API for Pokemon in the system"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/list.html": {
+      "get": {
+        "tags": ["Pokemon List"],
+        "summary": "Generates List of Pokemon with description, type and stats",
+        "parameters": [
+          {
+            
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "This service allows you view the original 151 Pokemon"
+          }
+        }
+      }
+    }
+  }
+}

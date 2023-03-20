@@ -1,0 +1,322 @@
+/* general */
+body {
+  background: #fff url(images/container_bg.png)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* navbar */
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 5vh;
+}
+
+
+/* hero-section */
+#hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 30vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.hero__image--container {
+  margin: 32px;
+}
+
+.hero__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+/* starters */
+#kanto__starters {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 48px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding-bottom: 42px;
+  height: 50vh;
+}
+
+.btn {
+  margin-top: 32px;
+}
+/* footer */
+footer {
+  background-color: #1f1f1f;
+  color: white;
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 15vh;
+}
+.footer__statement {
+  text-align: center;
+  font-size: 12px;
+}
+.footer__list {
+  padding: 0;
+  margin: 0;
+}
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 16px;
+}
+/* images */
+.pokemon__logo {
+  margin-top: 3px;
+}
+
+.hero__image {
+  height: 75px;
+  width: 75px;
+}
+
+.hero__image--container {
+  position: relative;
+}
+figure {
+  position: relative;
+  left: 50px;
+}
+
+.pokemon__starter {
+  height: 100px;
+  width: 100px;
+  align-self: center;
+  margin: 16px;
+}
+
+.bulbapedia__logo {
+  height: 24px;
+  width: 24px;
+  filter: sepia(100%) hue-rotate(190deg) saturate(900%);
+}
+
+img:hover {
+  transform: scale(1.1);
+}
+
+/* pokemon list */
+
+#pokemon-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  background-color: white;
+}
+
+.list__title {
+  text-align: center;
+  text-decoration: underline;
+  margin: 0 auto;
+  padding: 32px;
+  background-color: white;
+  max-width: 1200px;
+}
+.card {
+  padding-bottom: 12px;
+}
+
+.pokemon-name {
+  font-size: 18px;
+  align-self: center;
+}
+
+.pokemon-type {
+  font-size: 12px;
+  display: flex;
+  color: white;
+  align-self: center;
+}
+
+.pokemon-type-item {
+  margin-right: 8px;
+  padding: 3px 6px;
+  border-radius: 8px;
+}
+
+.pokemon-description {
+  text-align: left;
+  padding-top: 8px;
+  font-size: 14px;
+  align-self: center;
+}
+
+.pokemon-sprite {
+  align-self: center;
+  width: 200px;
+}
+
+.pokemon-body {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+}
+.pokemon-stat {
+  width:40%;
+}
+.card-link {
+  font-size: 14px;
+}
+.card-text {
+  font-size: 14px;
+  text-align: center;
+}
+
+.button__container {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  gap: 16px;
+}
+
+.modal-button {
+  margin-left: 20px;
+}
+
+.modal-body {
+  align-self: center;
+}
+
+.pokemon__list--numbers{
+  margin: 8px;
+}
+.pokemon__list--item a {
+  text-decoration: none;
+  color: white;
+}
+/* about */
+
+#about {
+  margin: 0 auto;
+  max-width: 1200px;
+  height: calc(100vh - 56px);
+  background-color: white;
+}
+
+.about__header {
+  text-align: center;
+  padding-top: 32px;
+}
+
+.about__text {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+.about__pokeball {
+  height: 500px;
+  width: 500px;
+  display: block;
+  margin: 50px auto;
+  animation-duration: 5s;
+  animation-name: spin;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0%;
+  }
+ 
+  100%{
+transform: rotate(360deg);
+opacity: 100%;
+  }
+}
+
+/* TYPE COLOURS */
+
+.normal {
+  background-color: #a8a77a;
+}
+.fire {
+  background-color: #ee7130;
+}
+.water {
+  background-color: #6390f0;
+}
+.electric {
+  background-color: #f7d02c;
+}
+.grass {
+  background-color: #7ac74c;
+}
+.ice {
+  background-color: #96d9d6;
+}
+.fighting {
+  background-color: #c22e28;
+}
+.poison {
+  background-color: #a33ea1;
+}
+.ground {
+  background-color: #e2bf65;
+}
+.flying {
+  background-color: #a98ff3;
+}
+.psychic {
+  background-color: #f95587;
+}
+.bug {
+  background-color: #a6b91a;
+}
+.rock {
+  background-color: #b6a136;
+}
+.ghost {
+  background-color: #735797;
+}
+.dragon {
+  background-color: #6f35fc;
+}
+.dark {
+  background-color: #705746;
+}
+.steel {
+  background-color: #b7b7ce;
+}
+.fairy {
+  background-color: #d685ad;
+}
+
+
+/* chart */
+
+#chart-container {
+  position: relative;
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+}
+
+.modal {
+}
