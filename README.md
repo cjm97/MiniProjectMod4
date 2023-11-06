@@ -1,5 +1,5 @@
 # MiniProjectMod4
 
-
-run 'npm start' from root directory to start application
-navigate on browser to localhost:3000 to view project 
+run 'npm init' in root directory
+npm start
+navigate to localhost:3000/ 
